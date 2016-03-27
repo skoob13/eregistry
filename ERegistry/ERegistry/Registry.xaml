@@ -1,0 +1,63 @@
+﻿<Page x:Class="ERegistry.Registry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ERegistry"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="Registry"
+      MinHeight="600" MinWidth="600">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="196"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF4C4C" Name="bg">
+            <TextBlock Name="dayOfWeek" FontSize="18" Foreground="White" Margin="0,16,16,0" HorizontalAlignment="Right">Friday</TextBlock>
+            <Grid MouseLeftButtonDown="AddRegistry_MouseLeftButtonDown" Name="AddRegistry" Width="120" Height="30" Background="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,16,16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="16"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="2" Opacity="0.3" Direction="-90" RenderingBias="Quality" ShadowDepth="1"/>
+                </Grid.Effect>
+                <Image Height="14" Width="14" Source="{StaticResource Plus}" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Добавить запись</TextBlock>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <TextBlock Name="NO" FontSize="72" Foreground="White">26</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1" HorizontalAlignment="Center">
+                    <TextBlock Name="Surname" FontSize="48" Foreground="White">February</TextBlock>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Background="White" Name="Top25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#101014">
+                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Ближайшие записи</TextBlock>
+            </Grid>
+            <Grid Grid.Row="1" Background="White">
+                <WrapPanel VerticalAlignment="Center" Orientation="Vertical" Name="Wrapper">
+                </WrapPanel>
+            </Grid>
+        </Grid>
+        <Grid Background="White" Grid.Row="1" Name="Timetable" Visibility="Hidden">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <WrapPanel Name="Reg" Orientation="Horizontal" HorizontalAlignment="Center"/>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

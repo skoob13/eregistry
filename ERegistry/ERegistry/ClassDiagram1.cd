@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ERegistry.UserGroups" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgwAAQAACWQAEAAIgAACA4BCCEIISAIBA=</HashCode>
+      <FileName>UserGroups.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.SpecDictionary" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAAAAAAAAAAAAACIAAQAAAAAAAAAAIAAA=</HashCode>
+      <FileName>SpecDictionary.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.ShowHistory" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAIAAAIAAAAAAAACAABEAAAAAAIAAAAABQAAA=</HashCode>
+      <FileName>ShowHistory.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.SelectDoctorAndDate" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAgAAIAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SelectDoctorAndDate.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.SelectAnalyzes" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAkAAAAAAAAAABAAAAAAAAACAAAAQAAA=</HashCode>
+      <FileName>SelectAnalyzes.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.Reports" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAkAgAAAAAAAA=</HashCode>
+      <FileName>Reports.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Registry" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQEAAAQBAASAAAARQQAAAAAgBAAAACoAhAAAAAAIgA=</HashCode>
+      <FileName>Registry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.MainWindow" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAAEAQIEAAAAAAAACAAIAgACAAEAAAAAgABQI=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.History" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAQCAAAQAACAAAAAAACAIAACAAAQAAAA=</HashCode>
+      <FileName>History.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.Forms" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAgAAAgABAAQAAAAAAgEEAAAABAAAAAAACAAAEAA=</HashCode>
+      <FileName>Forms.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.Client" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgACEABAAAAQABAgAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Employee" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgACAAAAAAAQABAgAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Service" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Specialization" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Analyse" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Graph" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAAQAAAIoACACAJAAAAAAAAAAAIAAEAAABFAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.DoctorWithSpec" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggQEAAAAAAQABAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ERegistry.Day" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Reg" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAEEAAAAAAAAAAAAQAQAAAAAAAAAAQQ=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.HistoryEntity" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAgBgBAAAAAAAAAAAAAAAAQAIEAAAAAAQQQ=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.DoctorsSpec" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAgAAAAAAAAAIAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.User" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Entities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.EditRegistry" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAEAAAACAEAEAAAAAAAAAAA=</HashCode>
+      <FileName>EditRegistry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.DGConverter" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DGConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.ApplicationController" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4IAABMQxADMgAEEMgAJgAGApCQBIAAEoQaQDECAAxIQ=</HashCode>
+      <FileName>ApplicationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.SQLCommands" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIYAAAAiCQIACgAFAACAIAQgIQAAjgABAACAIg=</HashCode>
+      <FileName>ApplicationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.Utils" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIgAAAAAAAAAAAgAAAQAAAEAAAAAAAACBCAAAAAA=</HashCode>
+      <FileName>ApplicationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ERegistry.AddToDB" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BiMABEgAAAEQQlBFAIAAQAgGDgBBAAAAAAACKCAAIEQ=</HashCode>
+      <FileName>AddToDB.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.AddRegistry" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAAAAEAwAAAAAAEAEEAAEAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>AddRegistry.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.AddHistory" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAACAAAAAAAAACAAAQAACAAAAgAIAAAAAyAQAAAIAA=</HashCode>
+      <FileName>AddHistory.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ERegistry.AddGraph" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAgAAAAAAAAEEAAAAAIAAIAABCAAAAAA=</HashCode>
+      <FileName>AddGraph.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

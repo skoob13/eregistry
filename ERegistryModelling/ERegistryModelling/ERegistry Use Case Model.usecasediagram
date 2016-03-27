@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="5d03d2ab-87fe-436e-90c4-79556ab20ea6" name="UseCase" linkedPackageId="ed600b4a-8a32-46e0-800f-fcf20163772d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ea780b25-63dd-44b8-aea6-41e00342eb04" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7745fb2d-4475-47c2-b572-71354931ac63" />
+        <targetEnds>
+          <association Id="add7a9b5-e34a-4ee3-9c11-3f75a310f4af" isDerived="false" sourceEndRoleName="Administator" targetEndRoleName="Работа с группами пользователей" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e617c407-a8f4-41c1-9451-e9ae2a513400" LastKnownName="Работа с базой данных" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a23ea09b-8aff-4640-bc8f-481fd2f386fb" name="Administator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="05907c29-b15d-4693-bfbf-ea52ff6c728f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f87caacf-f8f0-4eff-893c-6693028a67d1" name="Работа с группами пользователей" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2fa80a2a-816f-4603-b762-fb515f33865b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3fe92f40-9e2f-4180-8357-5efbc80a1179" />
+          </association>
+          <association Id="974055c3-4481-49b4-88a8-ce271385de07" isDerived="false" sourceEndRoleName="Administator" targetEndRoleName="Работа с записями" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="280d94d2-14ee-43bc-ab90-aca92da439a0" LastKnownName="Работа с записями" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b784a092-4974-4159-b651-40e50f943461" name="Administator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d229046d-e411-4f93-94aa-4fb12c870f39" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d156a3ef-311d-4c5c-8dad-0f2d7eab4ded" name="Работа с записями" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46aec4c6-0c1b-4ca4-a31e-cf083a335cf3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6fc5fc6-6568-4d01-bed8-521aebdb74d2" />
+          </association>
+          <association Id="39f8dae3-51e4-4a69-8921-d1cee23edff4" isDerived="false" sourceEndRoleName="Administator" targetEndRoleName="Формирование отчетов" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="245e63bf-615b-4f25-bba0-77322f228ffc" LastKnownName="Формирование отчетов" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e832f610-9a36-4953-8dee-28e51ed54a9d" name="Administator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="88771805-29f5-46a1-a9a2-45d09dc4c6fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbdd5691-906f-4b04-8be8-929fdf24850e" name="Формирование отчетов" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac0888ec-7004-4b15-85db-baf04e209a23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="80f50af4-96e0-43ad-822a-ce5bade44e67" />
+          </association>
+          <association Id="736de06b-47a2-41a2-a184-4d7f656bda97" isDerived="false" sourceEndRoleName="Administator" targetEndRoleName="Формирование истории болезни" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="669620ad-2b15-473e-842a-7f20bff90982" LastKnownName="Формирование истории болезни" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="650e0f6e-659f-44a3-9457-6cf77c865004" name="Administator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="49f3efa8-a8e8-4926-836b-c8efb1c295f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b51da6e-adfe-4368-8624-a3b81097dcd7" name="Формирование истории болезни" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cec6317a-6aa8-456d-9423-3823f466f506" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ced1efe0-bd6a-46a6-b4ef-9d04256f1e0a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="dca4546e-f3d9-4d50-9177-9559e264084a" name="Doctor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2587289-6a5c-4cfa-9f4a-03509e49828d" />
+        <targetEnds>
+          <association Id="4c10cc49-2679-458c-bd49-ac533a8719d1" isDerived="false" sourceEndRoleName="Doctor" targetEndRoleName="Формирование истории болезни" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="669620ad-2b15-473e-842a-7f20bff90982" LastKnownName="Формирование истории болезни" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8bcce1c8-59e4-4d19-b293-1cf4b9c2faa7" name="Doctor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="be90e3e9-4649-43c9-8fc8-f20df223a745" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf58e4f2-9820-4ec3-9a5a-b2efd9a33cb3" name="Формирование истории болезни" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="160126db-7b53-4d3c-90e5-8b39fa543cc3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9956d366-2f20-4d21-bfaa-d2260da4eeae" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d3a7f48f-3f36-4720-abda-5a85a2af09f2" name="Chief" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="08df89c8-cabf-47e1-b482-f1f6b753a8cc" />
+        <targetEnds>
+          <association Id="826d26ad-77bc-4e31-b46e-98b63ec5e391" isDerived="false" sourceEndRoleName="Chief" targetEndRoleName="Формирование отчетов" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="245e63bf-615b-4f25-bba0-77322f228ffc" LastKnownName="Формирование отчетов" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4168f0cc-6e96-4735-9351-a77e08265070" name="Chief" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ba44e10-47e6-48aa-b02f-38733a566736" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c724415-f311-4a38-b25d-117586e918ca" name="Формирование отчетов" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d87e1cfb-f9ea-4447-9c5c-71892a76ed62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="09cf9932-9887-4f44-bcfb-945328941c22" />
+          </association>
+          <association Id="47394b70-aad3-4ccb-aca0-36e99dbabe05" isDerived="false" sourceEndRoleName="Chief" targetEndRoleName="Работа с группами пользователей" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e617c407-a8f4-41c1-9451-e9ae2a513400" LastKnownName="Работа с базой данных" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31c8edd3-01b0-4198-91a2-18f51079c275" name="Chief" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bbb5539b-3f7c-48ea-bc95-1212e9d4632e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="47b9557d-69e6-49e2-9c34-2f5d2a03b536" name="Работа с группами пользователей" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="037583c1-74dc-41b6-a891-84e71634c23c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8808a0b9-bf94-45e8-97c9-0c84be0823b2" />
+          </association>
+          <association Id="9762519c-306e-4f9f-b59c-d4d9c6010932" isDerived="false" sourceEndRoleName="Chief" targetEndRoleName="Работа с записями" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="280d94d2-14ee-43bc-ab90-aca92da439a0" LastKnownName="Работа с записями" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a01a8b06-9c16-4e72-8b77-dcb036ebb2e8" name="Chief" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1df7c2b9-b36a-4a1e-a14c-c5400f8ab695" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="23b23f20-d531-4ff3-a3d6-7bda4fd4bdca" name="Работа с записями" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d7483be0-6a19-44b0-a65d-b1bd4e8dc76b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b5468eee-84a3-4c6f-ad2b-e67a504b7b8d" />
+          </association>
+          <association Id="6faa4e38-4fb7-4c01-afa5-009bbcb45d04" isDerived="false" sourceEndRoleName="Chief" targetEndRoleName="Формирование истории болезни" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="669620ad-2b15-473e-842a-7f20bff90982" LastKnownName="Формирование истории болезни" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1cacb96-2ddc-48f4-83fb-4b1a5086a640" name="Chief" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a84a29b-bc57-4cda-9c82-545f36995c7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8723787a-77e1-4f6e-846c-23a2366d0d02" name="Формирование истории болезни" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad59d899-e541-49f4-a6c5-aa21b89df181" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f3d294c6-e031-405b-ad8e-0ca22c269b3b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e617c407-a8f4-41c1-9451-e9ae2a513400" name="Работа с базой данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a81bef71-5ace-4006-961d-a58660cac9e2" />
+        <additions>
+          <include Id="c2b11b9e-f7ad-4ac9-a457-d0a5ab93c491">
+            <useCaseMoniker Id="fa448441-6ae7-4cfd-ac30-d935c8349b0a" LastKnownName="Действия над клиентами" />
+            <elementDefinition Id="5d7ff1cc-e8c5-4d3c-889c-f527723928d1" />
+          </include>
+          <include Id="7ce9cb5e-1069-4100-800f-d59c5bc86082">
+            <useCaseMoniker Id="a3402035-96cf-40d4-97ea-ea83f833a51b" LastKnownName="Действия над сотрудниками" />
+            <elementDefinition Id="4a5ac70e-caea-46e6-a91c-00f6bd4a3bc6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fa448441-6ae7-4cfd-ac30-d935c8349b0a" name="Действия над клиентами" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2010669e-9442-45cc-bfcb-8d5da1117af7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a3402035-96cf-40d4-97ea-ea83f833a51b" name="Действия над сотрудниками" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="effed593-712b-458d-b82a-6eb40e75eb85" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="280d94d2-14ee-43bc-ab90-aca92da439a0" name="Работа с записями" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3e447f0f-5857-4418-aace-dbad10335828" />
+        <additions>
+          <include Id="0c379425-7440-49f2-b949-f1ea82a985b9">
+            <useCaseMoniker Id="c8a19110-c1fe-4465-a0d3-612788b6d1eb" LastKnownName="Добавление, удаление, изменение" />
+            <elementDefinition Id="7a05dad9-18d5-44e7-9bd1-2c8ee088b137" />
+          </include>
+          <include Id="d6cd3ca1-040a-46e2-a36c-2e32b944a280">
+            <useCaseMoniker Id="11b6506f-38e1-4c96-834c-1bea8c14cca3" LastKnownName="Работа с уведомлениями" />
+            <elementDefinition Id="a92a066e-1a2d-49e9-b263-21130e86aa3f" />
+          </include>
+          <include Id="e534fe5d-e20d-4957-bed5-6045e9e85c73">
+            <useCaseMoniker Id="456acd7d-692f-4a30-832b-e03666a7cee8" LastKnownName="Формирование чека" />
+            <elementDefinition Id="689acd6e-b943-4731-b57d-f04463183bfc" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c8a19110-c1fe-4465-a0d3-612788b6d1eb" name="Добавление, удаление, изменение" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26e700fb-304f-4102-a17a-3c8fafc11cbe" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="11b6506f-38e1-4c96-834c-1bea8c14cca3" name="Работа с уведомлениями" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="113cb150-f24c-4078-a91e-3933dba06189" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="456acd7d-692f-4a30-832b-e03666a7cee8" name="Формирование чека" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7499c132-d10b-4e6d-a6ab-e9ce0ae72c75" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="245e63bf-615b-4f25-bba0-77322f228ffc" name="Формирование отчетов" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4124e5b8-1d23-4872-b684-b1a184aeebe5" />
+        <additions>
+          <include Id="9b7e5330-a908-4432-bf1c-c9ffb9af18da">
+            <useCaseMoniker Id="1ca4814f-a6e9-4442-848c-e924e08e53b4" LastKnownName="Z отчет" />
+            <elementDefinition Id="8d2938db-23fa-4b94-bb81-498f97263a07" />
+          </include>
+          <include Id="28a97e34-e977-4f46-be3e-3029b28edba9">
+            <useCaseMoniker Id="28e68b1a-01d8-4688-affd-6f9783d49723" LastKnownName="Формирование приемного листа" />
+            <elementDefinition Id="7bbfadd0-607f-4961-b68d-b1fe0c321d52" />
+          </include>
+          <include Id="9759e0a3-ce6f-4402-bc26-12c3421519ca">
+            <useCaseMoniker Id="2af1b4eb-fc69-458b-8917-123ebb421cc6" LastKnownName="Визуализация данных" />
+            <elementDefinition Id="c05a0036-0811-4f9a-a370-892750ddd67c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1ca4814f-a6e9-4442-848c-e924e08e53b4" name="Z отчет" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="52c76b60-5f74-4096-9afc-f57c2b42ed0e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="28e68b1a-01d8-4688-affd-6f9783d49723" name="Формирование приемного листа" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="337e6ee9-4f26-46c0-8c87-dede622b2272" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2af1b4eb-fc69-458b-8917-123ebb421cc6" name="Визуализация данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1d1604a7-a6fd-4634-a7c0-8b6e778088a2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="669620ad-2b15-473e-842a-7f20bff90982" name="Формирование истории болезни" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ad4fc973-8814-4dde-b04d-f0853133d6da" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ed600b4a-8a32-46e0-800f-fcf20163772d" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f02ddd05-08d1-44e2-a783-a2f162bd12ba">
+        <profileInstance Id="fe254d4e-52d0-4b66-a7b1-2977d5134ac0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="760cbd82-55f3-435b-94e9-1f2e51fc58cd">
+        <profileInstance Id="42b97c27-4fa4-4ef0-a9eb-0147601729cd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

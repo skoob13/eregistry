@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="b341cc5d-cc8a-4323-a659-3589e28723ac" name="Формирование отчетов" linkedPackageId="cf45400d-54ab-4bc1-996e-cbb2fd1a3117" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e459f560-df02-495a-9e51-0b006dcdfd09">
+      <elementDefinition Id="b6ec5bad-d36c-4374-9210-9f9e7dc15213" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="96e5af90-c0ac-407f-b670-fa6f20b42475">
+      <elementDefinition Id="41e3464e-f263-4886-aab9-9e20d0bb0b45" />
+      <body>Приложение</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="bedcfc59-f881-4d2e-baab-bccc02126e6a">
+      <profileInstance Id="efb890ba-d7ca-440f-af43-2a734dfec564" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ac9d51ba-1829-4bff-a687-c14ed4853e6b">
+      <profileInstance Id="09b50f42-e2f0-4186-b42e-42cd2468cc05" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="bf12e0ee-3329-49aa-8319-5423d3b6aa44" name="Формирование отчетов" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="610a9396-fafe-4a41-8342-cbb7e309d5d1" />
+        <nodes>
+          <initialNode Id="d09f5a90-7329-4b21-8dea-de7623870c89" name="Initial1" isLeaf="false">
+            <elementDefinition Id="0b6e74b3-c0a6-4ca6-bb68-64eb2eb6089b" />
+            <flowNodeTargets>
+              <controlFlow Id="777b8622-6c8b-4b49-952e-c5f76d6cc413" isLeaf="false">
+                <opaqueActionMoniker Id="9fb4a0d2-da67-4dd4-85d2-d4995bc24a15" LastKnownName="Пользователь открыл форму" />
+                <elementDefinition Id="71ee2fc0-8213-439a-b094-1ae0dd86a5c5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="9fb4a0d2-da67-4dd4-85d2-d4995bc24a15" name="Пользователь открыл форму" isLeaf="false">
+            <elementDefinition Id="9b8c8e31-efda-4c90-9225-83910f7860dc" />
+            <flowNodeTargets>
+              <controlFlow Id="a96e8166-4d43-4d60-a98c-37107acfd943" isLeaf="false">
+                <opaqueActionMoniker Id="9270ee0b-d5f7-406c-9a5b-73a96c5aede3" LastKnownName="Отобразить форму" />
+                <elementDefinition Id="40fa28f1-6dbd-4bea-b4a5-7005429cf560" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9270ee0b-d5f7-406c-9a5b-73a96c5aede3" name="Отобразить форму" isLeaf="false">
+            <elementDefinition Id="72823829-d50e-422d-97fb-b8cb094317cb" />
+            <flowNodeTargets>
+              <controlFlow Id="077d7920-afc2-4520-83e8-ec7a945a8e8d" isLeaf="false">
+                <opaqueActionMoniker Id="dc768404-cb53-40ed-bdb0-f9c23b6cd811" LastKnownName="Выбрать отчет" />
+                <elementDefinition Id="e73145c0-cb18-4430-8f9a-0dcc607d5fe6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="dc768404-cb53-40ed-bdb0-f9c23b6cd811" name="Выбрать отчет" isLeaf="false">
+            <elementDefinition Id="35f965d7-aafe-40c7-bd69-a7110ae3a4f8" />
+            <flowNodeTargets>
+              <controlFlow Id="f7bbb6c2-96d7-475a-877d-24af47a3b709" isLeaf="false">
+                <opaqueActionMoniker Id="e2cc48ee-cdc2-4d6a-8a53-2304821dee31" LastKnownName="Сформировать отчет" />
+                <elementDefinition Id="b7daa595-17c9-4bba-8795-71619a9ee960" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e2cc48ee-cdc2-4d6a-8a53-2304821dee31" name="Сформировать отчет" isLeaf="false">
+            <elementDefinition Id="6ca6474e-1a01-4792-8584-8935b5d4175e" />
+            <flowNodeTargets>
+              <controlFlow Id="786934cf-c9f0-4c32-a271-3b9f9dfe687c" isLeaf="false">
+                <opaqueActionMoniker Id="71c95ea7-bae1-47b2-87c1-2fa63cc0080f" LastKnownName="Отобразить отчет" />
+                <elementDefinition Id="d777d1ca-3c5e-47fa-8737-da48db44973c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="71c95ea7-bae1-47b2-87c1-2fa63cc0080f" name="Отобразить отчет" isLeaf="false">
+            <elementDefinition Id="0b735bd5-8475-4fad-abfd-931f51dbc907" />
+            <flowNodeTargets>
+              <controlFlow Id="dca43a30-bdd1-4b1e-bf78-3fadc25a5cca" isLeaf="false">
+                <opaqueActionMoniker Id="9b311593-f4f2-413b-bd63-9a3ed67ea295" LastKnownName="Закрыть форму" />
+                <elementDefinition Id="171296a2-84db-408d-bb13-3696fbbc0488" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9b311593-f4f2-413b-bd63-9a3ed67ea295" name="Закрыть форму" isLeaf="false">
+            <elementDefinition Id="01bc25d6-c5cc-4480-938a-7c019f1ab3c3" />
+            <flowNodeTargets>
+              <controlFlow Id="fe18ee92-4ae7-44e6-a763-bf4bf7d5f39c" isLeaf="false">
+                <activityFinalNodeMoniker Id="d9ffeb0a-aa8c-44f6-b2fb-3b00125e731a" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="0fdb99d8-4b11-424e-81f4-be3b9d0fa0bd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d9ffeb0a-aa8c-44f6-b2fb-3b00125e731a" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="c5ea7aa4-9201-42da-a09f-eabc1bbd8068" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="cf45400d-54ab-4bc1-996e-cbb2fd1a3117" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

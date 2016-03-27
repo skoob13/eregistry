@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="f48810a2-b1da-4418-9c60-f958de74f441" name="Формирование чеков" linkedPackageId="dd3d53d4-4816-4a70-9a37-78ed832a9883" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="3cbd402d-bbaa-4130-acc1-d89b3d41b8b7">
+      <elementDefinition Id="86782eaf-ff62-4b68-9e33-018e6370cee0" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="e8ae0006-3add-48e6-85af-71e935bfb681">
+      <elementDefinition Id="d120cb48-46e8-43f4-9064-d8539a604d0c" />
+      <body>Клиент</body>
+    </comment>
+    <comment Id="b5de6eb8-7d27-4e20-9a14-5956a3ffc199">
+      <elementDefinition Id="4e41f992-89df-496c-b26d-069c73a691a4" />
+      <body>Приложение</body>
+    </comment>
+    <comment Id="021ea212-018d-4a0d-9251-a40f8286943b">
+      <elementDefinition Id="309ef399-e70f-4482-9f9d-159ebc6dfbe9" />
+      <body>БД</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c2a4b390-77f9-4f2b-b8d7-2c48eb7c9d44">
+      <profileInstance Id="e0dd060a-98cb-4630-ac16-7c9f9fc5b71e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7a79df4b-228b-44a9-82d3-cac1e5e55afa">
+      <profileInstance Id="a4138909-d1ca-4fe1-adee-64cba1f2e473" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="c8f2c428-aa17-4773-931c-dcd16d6d88c4" name="Формирование чеков" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="9113b834-5173-4778-a925-dc15074a6ed0" />
+        <nodes>
+          <initialNode Id="5d4b5d65-1e2c-4ba0-aeb0-e4be51b4ec51" name="Initial1" isLeaf="false">
+            <elementDefinition Id="5ac4f0b5-91b3-456e-a2ef-627ce4d60868" />
+            <flowNodeTargets>
+              <controlFlow Id="4be327dc-6ecb-4818-be86-0932bac6714a" isLeaf="false">
+                <opaqueActionMoniker Id="17472ce1-c6a6-4ce2-9bd4-3699854b5365" LastKnownName="Выбрать запись" />
+                <elementDefinition Id="b24fdfba-9797-482e-8402-75a5b15fdf20" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="17472ce1-c6a6-4ce2-9bd4-3699854b5365" name="Выбрать запись" isLeaf="false">
+            <elementDefinition Id="e0c1d39e-1f6a-4af5-8565-7aa7e0e05ac6" />
+            <flowNodeTargets>
+              <controlFlow Id="b12a1b3d-8432-442d-baea-e3aad1f83a93" isLeaf="false">
+                <opaqueActionMoniker Id="071969a1-92c4-4444-be4a-b4d63fc3e576" LastKnownName="Сформировать чек" />
+                <elementDefinition Id="4094b8e7-d420-4ab0-b7d4-1f7c9e2c3fd1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="071969a1-92c4-4444-be4a-b4d63fc3e576" name="Сформировать чек" isLeaf="false">
+            <elementDefinition Id="934a9c54-3640-494f-8276-1037e460becc" />
+            <flowNodeTargets>
+              <controlFlow Id="7138e639-22de-4cb6-bdce-caf59a92abff" isLeaf="false">
+                <forkNodeMoniker Id="2bc73a2e-11fd-4c21-93b9-757155a49ef9" LastKnownName="Fork1" />
+                <elementDefinition Id="853ae7a5-1fc6-46dc-b993-2e1a64dfdc8f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="2bc73a2e-11fd-4c21-93b9-757155a49ef9" name="Fork1" isLeaf="false">
+            <elementDefinition Id="986b2326-e4de-4099-8ad1-11f9cf8c321e" />
+            <flowNodeTargets>
+              <controlFlow Id="dd5c2533-c3f3-4477-b049-72ed8731bb00" isLeaf="false">
+                <opaqueActionMoniker Id="f0acd838-e437-4d5f-b633-1f1e80cd6bdc" LastKnownName="Проверить чек на условия" />
+                <elementDefinition Id="72effeab-960f-4bb8-88aa-34778acb5ecb" />
+              </controlFlow>
+              <controlFlow Id="70d4bb95-8f02-4c7b-b9e4-95e15e398f6e" isLeaf="false">
+                <opaqueActionMoniker Id="31d49192-79e3-4ce8-8d4a-71ca7fd754e5" LastKnownName="Сформировать запрос на получение данных о стоимости услуги" />
+                <elementDefinition Id="11f42cc1-d048-4509-9424-aa9be528f1bf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="f0acd838-e437-4d5f-b633-1f1e80cd6bdc" name="Проверить чек на условия" isLeaf="false">
+            <elementDefinition Id="ac24ded4-f93d-47d8-a56b-47bf77b95866" />
+            <flowNodeTargets>
+              <controlFlow Id="bec8cc58-531c-4c6e-84f3-997e0fe5afe4" isLeaf="false">
+                <joinNodeMoniker Id="070aef55-9c60-46bc-8c77-d8699971b71b" LastKnownName="Join1" />
+                <elementDefinition Id="9df60386-f98e-4330-bc07-8f1a00b94ce0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="31d49192-79e3-4ce8-8d4a-71ca7fd754e5" name="Сформировать запрос на получение данных о стоимости услуги" isLeaf="false">
+            <elementDefinition Id="b524b0ff-0002-4547-843b-439f3f892979" />
+            <flowNodeTargets>
+              <controlFlow Id="fca82d56-7bb1-4d6b-94a9-08066da7d540" isLeaf="false">
+                <opaqueActionMoniker Id="767def79-c5c3-4ba9-9a3b-341b29b7e4ef" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="cebb755f-d410-4de9-bc9b-6a851ffc9a16" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="767def79-c5c3-4ba9-9a3b-341b29b7e4ef" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="f1cc047b-ffea-4774-89dd-78adab7a1b52" />
+            <flowNodeTargets>
+              <controlFlow Id="3c95598f-dd50-4d65-821f-59c0c449f0d7" isLeaf="false">
+                <joinNodeMoniker Id="070aef55-9c60-46bc-8c77-d8699971b71b" LastKnownName="Join1" />
+                <elementDefinition Id="585460ee-e36b-4942-b0ad-1bfdb384db88" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="070aef55-9c60-46bc-8c77-d8699971b71b" name="Join1" isLeaf="false">
+            <elementDefinition Id="bfee22ee-252a-4a17-9be8-824958d2ae2e" />
+            <flowNodeTargets>
+              <controlFlow Id="4bcb9e6f-cf32-43b7-a90a-9ef3548bcc00" isLeaf="false">
+                <opaqueActionMoniker Id="678c5b6c-5b2a-4af0-814f-a20f91cd3c12" LastKnownName="Сформировать чек на печать" />
+                <elementDefinition Id="ec05f309-f54a-4905-96b5-98bdef64024d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="678c5b6c-5b2a-4af0-814f-a20f91cd3c12" name="Сформировать чек на печать" isLeaf="false">
+            <elementDefinition Id="dc4b82b2-fd52-4f51-a36e-5f920d78c2bd" />
+            <flowNodeTargets>
+              <controlFlow Id="3c11e475-d5d9-4b12-aac5-8e4403e59d93" isLeaf="false">
+                <opaqueActionMoniker Id="c051f0f1-b09b-4055-af5d-bc2b05632704" LastKnownName="Напечатать чек" />
+                <elementDefinition Id="582056f4-04ae-4dab-884c-dc8210419b9d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c051f0f1-b09b-4055-af5d-bc2b05632704" name="Напечатать чек" isLeaf="false">
+            <elementDefinition Id="0484ba6e-d954-4d3c-9d1c-00e5a3060344" />
+            <flowNodeTargets>
+              <controlFlow Id="3cc5cfc8-6d2c-4d10-9d19-5c6566ed8126" isLeaf="false">
+                <decisionNodeMoniker Id="75cfa7f8-98fd-4f11-a9eb-186771a2382f" LastKnownName="Decision1" />
+                <elementDefinition Id="be319ce1-a38d-4635-bd52-82e4da348f0b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="75cfa7f8-98fd-4f11-a9eb-186771a2382f" name="Decision1" isLeaf="false">
+            <elementDefinition Id="e88c81e3-11b4-46a4-80b6-d8ec5519a0c6" />
+            <flowNodeTargets>
+              <controlFlow Id="2057e75c-f0dd-4a3f-8565-1a7ba618a572" isLeaf="false">
+                <opaqueActionMoniker Id="47ff1caf-15af-40b2-a03f-0374d6a8b152" LastKnownName="Оплатить чек" />
+                <elementDefinition Id="1b731834-0922-4b0b-a7f5-1fd0bbe79582" />
+              </controlFlow>
+              <controlFlow Id="e03a732f-c88a-4ffe-8050-075cbd9c7dc8" isLeaf="false">
+                <opaqueActionMoniker Id="55bb6138-91da-4a4c-920b-6ec125841aa4" LastKnownName="Не оплачивать чек" />
+                <elementDefinition Id="ab00a465-198a-44ff-8f7d-63677de5dc73" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="47ff1caf-15af-40b2-a03f-0374d6a8b152" name="Оплатить чек" isLeaf="false">
+            <elementDefinition Id="b4c5031e-c5e8-4921-9799-42ae0fbfe82e" />
+            <flowNodeTargets>
+              <controlFlow Id="8c77dcc7-cc24-4a17-85df-aed6ee1b8deb" isLeaf="false">
+                <opaqueActionMoniker Id="79d2ae70-c28e-4b47-b121-7a165f7b0cfd" LastKnownName="Подтвердить оплату" />
+                <elementDefinition Id="96239c0c-bfa6-4f43-8961-3c332fe37134" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="55bb6138-91da-4a4c-920b-6ec125841aa4" name="Не оплачивать чек" isLeaf="false">
+            <elementDefinition Id="690532d5-208d-4248-81e6-69d2af73d02a" />
+            <flowNodeTargets>
+              <controlFlow Id="1a4b1ef6-1b7c-4ec0-808c-938b43c14d95" isLeaf="false">
+                <opaqueActionMoniker Id="4c90ca3b-1e32-479c-aeab-d260c1576b2f" LastKnownName="Закрыть чек" />
+                <elementDefinition Id="a8a795fe-8f12-4a0e-bcc2-c4a32556d854" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="79d2ae70-c28e-4b47-b121-7a165f7b0cfd" name="Подтвердить оплату" isLeaf="false">
+            <elementDefinition Id="a1800d7d-df1a-4766-b38a-2506ca0c5459" />
+            <flowNodeTargets>
+              <controlFlow Id="fbcbd837-052e-4759-b647-2e0cd72c80be" isLeaf="false">
+                <opaqueActionMoniker Id="b2457c07-b1f0-4e19-9491-4cb05c326866" LastKnownName="Сформировать запрос, что услуга оплачена" />
+                <elementDefinition Id="0c390497-b58e-4504-9e07-8ad5a1b86d59" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4c90ca3b-1e32-479c-aeab-d260c1576b2f" name="Закрыть чек" isLeaf="false">
+            <elementDefinition Id="645165f9-77c5-412a-a5cc-9e973f4da585" />
+            <flowNodeTargets>
+              <controlFlow Id="5c570b12-9d9c-4c68-ba73-8c9596b7074b" isLeaf="false">
+                <mergeNodeMoniker Id="2730682a-171d-4a49-9bb6-2e9e2c0dc77a" LastKnownName="Merge1" />
+                <elementDefinition Id="ba8d6ce1-599b-497e-8d49-fd12eae90de5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b2457c07-b1f0-4e19-9491-4cb05c326866" name="Сформировать запрос, что услуга оплачена" isLeaf="false">
+            <elementDefinition Id="f36cebad-1410-457b-a8d1-6e13e4e412cf" />
+            <flowNodeTargets>
+              <controlFlow Id="1aa490e8-5d25-4cca-a49b-520f084c73c0" isLeaf="false">
+                <opaqueActionMoniker Id="785d12dc-0ec5-4855-96a0-f3e27465b759" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="6be85117-cd92-46fb-ae59-e29bcc221351" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="785d12dc-0ec5-4855-96a0-f3e27465b759" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="60cebcc3-6bcb-41f0-98ea-cc2659786dd0" />
+            <flowNodeTargets>
+              <controlFlow Id="50e54315-0546-431b-9164-58ba1f785176" isLeaf="false">
+                <mergeNodeMoniker Id="2730682a-171d-4a49-9bb6-2e9e2c0dc77a" LastKnownName="Merge1" />
+                <elementDefinition Id="8a0147c5-378b-4943-a528-92595194e9f6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="2730682a-171d-4a49-9bb6-2e9e2c0dc77a" name="Merge1" isLeaf="false">
+            <elementDefinition Id="84d65529-49c7-4c65-8aaa-b631958ea5bd" />
+            <flowNodeTargets>
+              <controlFlow Id="5dda9166-d995-44c5-87a2-e6d3e660933f" isLeaf="false">
+                <activityFinalNodeMoniker Id="28d516b7-ef65-4f96-bb8b-04111d523874" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="0c73746b-9255-437f-b8d6-1f4c9213eca9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <activityFinalNode Id="28d516b7-ef65-4f96-bb8b-04111d523874" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="c403bac3-f0e8-4949-91ba-ed5cb9675166" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="dd3d53d4-4816-4a70-9a37-78ed832a9883" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

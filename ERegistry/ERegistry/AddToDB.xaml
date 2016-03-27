@@ -1,0 +1,254 @@
+﻿<Window x:Class="ERegistry.AddToDB"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERegistry"
+        mc:Ignorable="d"
+        Title="Добавить клиента" Height="220" Width="600"
+        WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner"
+        xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        ResizeMode="NoResize">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Name="Label" Grid.Row="0" FontSize="14" Foreground="#19191F" VerticalAlignment="Center" Margin="8,0,0,0">Добавить клиента</TextBlock>
+        <Grid Grid.Row="1" Background="#d8d8d8" Margin="8,2,8,2">
+            <!-- Add client -->
+            <Grid Name="Client_style" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">
+                  Паспорт:  
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+                  Фамилия:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+                  Имя:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+                  Отчество:
+                </TextBlock>
+
+                <xctk:MaskedTextBox Name="cs_pas" VerticalAlignment="Center" Margin="2" Grid.Row="0" Grid.Column="2" Mask="00 00 000 000"/>
+                <TextBox Name="cs_sur" VerticalAlignment="Center" Margin="2" Grid.Row="1" Grid.Column="2"/>
+                <TextBox Name="cs_name" VerticalAlignment="Center" Margin="2" Grid.Row="2" Grid.Column="2"/>
+                <TextBox Name="cs_otch" VerticalAlignment="Center" Margin="2" Grid.Row="3" Grid.Column="2"/>
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3">
+                  Пол:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3">
+                  Дата рождения:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="3">
+                  Моб. телефон:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="3">
+                  Адрес:
+                </TextBlock>
+
+                <ComboBox Name="cs_gender" Margin="2" Grid.Row="0" Grid.Column="4">
+                    <ComboBoxItem>Женский</ComboBoxItem>
+                    <ComboBoxItem>Мужской</ComboBoxItem>
+                </ComboBox>
+                <DatePicker Name="cs_birthday" Margin="2" Grid.Row="1" Grid.Column="4"/>
+                <xctk:MaskedTextBox Name="cs_phone" Mask="0 (000) 000-00-00" VerticalAlignment="Center" Margin="2" Grid.Row="2" Grid.Column="4"/>
+                <TextBox Name="cs_adress" VerticalAlignment="Center" Margin="2" Grid.Row="3" Grid.Column="4"/>
+                
+            </Grid>
+            
+            <!-- Add employee -->
+
+            <Grid Name="Employee_style" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">
+                  Фамилия:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+                  Имя:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+                  Отчество:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+                  Дата рождения:
+                </TextBlock>
+
+                <TextBox Name="es_sur" VerticalAlignment="Center" Margin="2" Grid.Row="0" Grid.Column="2"/>
+                <TextBox Name="es_name" VerticalAlignment="Center" Margin="2" Grid.Row="1" Grid.Column="2"/>
+                <TextBox Name="es_otch" VerticalAlignment="Center" Margin="2" Grid.Row="2" Grid.Column="2"/>
+                <DatePicker Name="es_birth" Margin="2" Grid.Row="3" Grid.Column="2"/>
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="3">
+                  Пол:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="3">
+                  Контактные данные:
+                </TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="3">
+                  Адрес рассылки:
+                </TextBlock>
+
+                <ComboBox Name="es_gender" Margin="2" Grid.Row="0" Grid.Column="4">
+                    <ComboBoxItem>Женский</ComboBoxItem>
+                    <ComboBoxItem>Мужской</ComboBoxItem>
+                </ComboBox>
+                <xctk:MaskedTextBox Name="es_phone" Mask="0 (000) 000-00-00" VerticalAlignment="Center" Margin="2" Grid.Row="1" Grid.Column="4"/>
+                <TextBox Name="es_ad"  VerticalAlignment="Center" Margin="2" Grid.Row="2" Grid.Column="4"/>
+
+            </Grid>
+
+            <!-- Add service -->
+
+            <Grid Name="Service_analyse_style" Grid.Row="0" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">Название:</TextBlock>
+                <TextBox Name="ss_name"  Grid.Row="0" Grid.Column="2" Margin="2" VerticalAlignment="Center"></TextBox>
+
+                <TextBlock Grid.Row="0" Grid.Column="3" VerticalAlignment="Center">Стоимость:</TextBlock>
+                <TextBox Name="ss_cost" MaxLength="6" TextChanged="ss_cost_TextChanged" Grid.Row="0" Grid.Column="4" Margin="2" VerticalAlignment="Center"/>
+            </Grid>
+            
+            <!-- Add profession -->
+
+            <Grid Name="Prof_style" Grid.Row="0" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">Название:</TextBlock>
+                <TextBox VerticalAlignment="Center" Name="Prof_tb" Grid.Row="0" Grid.Column="2" Margin="2"></TextBox>
+
+            </Grid>
+
+            <Grid Grid.Row="0" Name="Graph_style" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="155"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center">Промежуток приема врача</TextBlock>
+                    <ComboBox Name="Interval" Grid.Column="1" VerticalAlignment="Center" SelectedItem="0">
+                        <ComboBoxItem>15</ComboBoxItem>
+                        <ComboBoxItem>30</ComboBoxItem>
+                        <ComboBoxItem>60</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock VerticalAlignment="Center" Margin="4,0,0,0" Grid.Column="2">минут.</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">С</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">До</TextBlock>
+                    <CheckBox Click="pn_Click" Name="pn" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">ПН</CheckBox>
+                    <CheckBox Click="vt_Click"  Name="vt" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">ВТ</CheckBox>
+                    <CheckBox Click="sr_Click"  Name="sr" Grid.Column="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">СР</CheckBox>
+                    <CheckBox Click="ch_Click"  Name="ch" Grid.Column="4" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">ЧТ</CheckBox>
+                    <CheckBox Click="pt_Click"  Name="pt" Grid.Column="5" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">ПТ</CheckBox>
+                    <CheckBox Click="sb_Click"  Name="sb" Grid.Column="6" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">СБ</CheckBox>
+                    <CheckBox Click="vs_Click"  Name="vs" Grid.Column="7" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">ВС</CheckBox>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Name="pntp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Name="pntpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="vttp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="vttpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="srtp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="srtpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="chtp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="chtpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="pttp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="pttpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="5" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="sbtp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="sbtpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="6" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="vstp" DefaultValue="10:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                    <xctk:TimePicker IsEnabled="False" AllowSpin="False" Margin="4,0,0,0" Name="vstpe" DefaultValue="20:00:00" TimeInterval="00:15:00.000" Format="Custom" FormatString="HH:mm" Grid.Row="2" Grid.Column="7" VerticalAlignment="Center" StartTime="00:00:0" BorderThickness="0" EndTime="23:59:0"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Margin="8,0,8,0" Background="White">
+            <Button Name="Add_button" HorizontalAlignment="Right" VerticalAlignment="Center" Height="34" Width="100" Click="Add">Добавить</Button>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Center" Height="34" Width="100">Очистить</Button>
+        </Grid>
+    </Grid>
+</Window>

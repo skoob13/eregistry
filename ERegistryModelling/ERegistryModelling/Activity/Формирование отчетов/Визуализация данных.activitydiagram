@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="ee870270-bb01-4fd7-bbc6-7b6adb52353a" name="Визуализация данных" linkedPackageId="e937fcf9-0cba-41c4-9383-aef480176d83" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="4830e456-5cae-459e-a011-475a4bd09195">
+      <elementDefinition Id="c9fead82-a550-4841-9b77-31d7963b327a" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="a5c504ab-3818-450d-84e4-6ff144e0432b">
+      <elementDefinition Id="3be53d57-1724-44db-aa88-f240e214a617" />
+      <body>Приложение</body>
+    </comment>
+    <comment Id="4e758972-694a-457f-b3b5-07dad4f9194d">
+      <elementDefinition Id="bd2bd426-98c6-49a3-991f-2a7be99c6b85" />
+      <body>БД</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="63c085dc-a4ad-45b9-bf07-b11e9254e2e3">
+      <profileInstance Id="ef02a562-c17a-4c28-8d77-73ef75834384" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="599a2889-30bb-40c8-b9e1-c44309dff303">
+      <profileInstance Id="acdf2fad-8084-4eb6-a14f-6fd3109a435e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="8e0c5daf-a7ba-4f0a-8158-684c85125b6d" name="Визуализация данных" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="3f10a6d7-b269-4168-b3d8-41c63d64c832" />
+        <nodes>
+          <initialNode Id="06a877a7-9667-4d28-8350-5c3fccbbd22c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="cf0f55a2-6404-4cdf-92d2-bdfabcd455d8" />
+            <flowNodeTargets>
+              <controlFlow Id="f0ffd1d0-e149-4496-923a-c37cbde9f4d6" isLeaf="false">
+                <opaqueActionMoniker Id="a8b51ff3-08fb-45d3-b9b3-bd67c3489533" LastKnownName="Выбрать параметр для визуализации" />
+                <elementDefinition Id="d75dac1b-b1e8-4675-bad6-823c51e95925" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="a8b51ff3-08fb-45d3-b9b3-bd67c3489533" name="Выбрать параметр для визуализации" isLeaf="false">
+            <elementDefinition Id="d6ff47a8-21c2-43a8-aa10-79f622aa3ba8" />
+            <flowNodeTargets>
+              <controlFlow Id="24eeef59-a571-45e6-b0fa-f2b56d1f51f9" isLeaf="false">
+                <opaqueActionMoniker Id="a7acfea2-90fe-44ee-8d17-1779bfe76fcf" LastKnownName="Сформировать запрос" />
+                <elementDefinition Id="b77f4e10-15ef-4dbd-9c5a-8f00adee81bf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a7acfea2-90fe-44ee-8d17-1779bfe76fcf" name="Сформировать запрос" isLeaf="false">
+            <elementDefinition Id="30b7fc7a-8c25-4872-84f8-a7e3a33d1b2d" />
+            <flowNodeTargets>
+              <controlFlow Id="1862497b-510e-459e-afa5-ddffff0db968" isLeaf="false">
+                <opaqueActionMoniker Id="c0b09d7f-7331-425b-9884-fb6cda61df2e" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="cb257021-edc3-48a0-b117-f8ca90e1f37d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c0b09d7f-7331-425b-9884-fb6cda61df2e" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="1ca99060-f560-4a5b-bc35-5929108cdff6" />
+            <flowNodeTargets>
+              <controlFlow Id="4dd69e2e-8536-4314-ae5d-58af9a254d5e" isLeaf="false">
+                <opaqueActionMoniker Id="142971a4-1c14-42eb-a0b3-a99fddc20e24" LastKnownName="Отобразить диаграмму" />
+                <elementDefinition Id="54ef198a-4a95-4120-af85-ed0d5c6f13e8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="142971a4-1c14-42eb-a0b3-a99fddc20e24" name="Отобразить диаграмму" isLeaf="false">
+            <elementDefinition Id="7f4aae5e-40cd-4fe4-851a-267ce4e20e31" />
+            <flowNodeTargets>
+              <controlFlow Id="a185e582-54c3-44e8-9bba-eb222f77d9b4" isLeaf="false">
+                <activityFinalNodeMoniker Id="d5bcefec-a5e3-4544-8f46-3418ae50634d" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="2325c900-0d59-44aa-9573-064b4b4e678e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d5bcefec-a5e3-4544-8f46-3418ae50634d" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="a3ea2e38-a0d4-4f2d-8705-ff45ce0407bd" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="e937fcf9-0cba-41c4-9383-aef480176d83" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

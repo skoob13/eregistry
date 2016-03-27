@@ -1,0 +1,61 @@
+﻿<Window x:Class="ERegistry.EditRegistry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERegistry"
+        mc:Ignorable="d"
+        Width="380" Height="300" Title="Изменить запись"
+        WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF4C4C" Name="bg">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Foreground="White" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" Margin="4,0,0,0" Name="labelName">Георгий Андреевич</TextBlock>
+            <TextBlock Grid.Row="0" Foreground="White" FontWeight="Bold" FontSize="30" VerticalAlignment="Center" Margin="4,0,0,0" Name="labelSurame">Тарасов</TextBlock>
+            <TextBlock Grid.Row="2" Foreground="White" FontSize="12" VerticalAlignment="Center" Margin="4,0,0,0">идет в <TextBlock FontWeight="Bold" Name="labelTime">12:00</TextBlock> к <TextBlock FontWeight="Bold" Name="labelDoctor">Олегу Наркизовичу</TextBlock> на <TextBlock FontWeight="Bold" Name="labelService">Горловое пение</TextBlock></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" Background="#d8d8d8">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="4,0,0,0" VerticalAlignment="Center">Изменить услугу</TextBlock>
+            <Button Name="edit" Click="edit_Click" Grid.Row="0" Margin="2,2,4,2" Width="140" HorizontalAlignment="Right">Изменить</Button>
+            <TextBlock Visibility="Hidden" Grid.Row="0" Name="OK_step2" FontWeight="Bold" Margin="0,0,150,0" VerticalAlignment="Center" Foreground="Green" HorizontalAlignment="Right">Сохранено!</TextBlock>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="4,7,0,7" Grid.Column="0" VerticalAlignment="Center">Название:</TextBlock>
+                <TextBox Name="Service_tb" Grid.Column="1" Margin="2,6" VerticalAlignment="Center"/>
+                <Button Click="Service_b_Click" Name="Service_b" Margin="4" Grid.Column="2">Найти</Button>
+            </Grid>
+        </Grid>
+        <DataGrid BorderThickness="0.5" Name="Service" Grid.Row="2" AlternatingRowBackground="#d8d8d8" 
+                  AlternationCount="2" RowHeaderWidth="0"  CanUserAddRows="False" CanUserDeleteRows="False"
+                  CanUserReorderColumns="False" IsReadOnly="True" GridLinesVisibility="None" ColumnWidth="*"/>
+        <Grid Grid.Row="4" Background="#d8d8d8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="2" Margin="4" Click="Button_Click">Закрыть</Button>
+            <Button Name="GetCheck" Grid.Column="0" Margin="4" Click="GetCheck_Click">Оплатить</Button>
+        </Grid>
+    </Grid>
+</Window>

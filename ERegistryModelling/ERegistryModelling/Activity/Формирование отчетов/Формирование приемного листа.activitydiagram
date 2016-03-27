@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="aae3c8ef-46ab-40db-906e-5380fd122591" name="Формирование приемного листа" linkedPackageId="c280b2b1-bec4-4797-99d6-6818219e41d0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="ae852bf2-2fe2-4a78-9566-fe2dc3a2aa65">
+      <elementDefinition Id="52dcc36e-4e52-462d-bc69-492da6b90a76" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="1e983743-2ec3-4538-bf20-ae0e67124a25">
+      <elementDefinition Id="d6e158f4-61c4-4afd-830a-afbbda17ac24" />
+      <body>Приложение</body>
+    </comment>
+    <comment Id="a3ee19eb-ddc1-4500-bce2-db409010a0e7">
+      <elementDefinition Id="a69dadbb-bdc6-40eb-9639-8356fdfe90ce" />
+      <body>БД</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="791b765e-89cb-4db8-9a33-af065e5944bc">
+      <profileInstance Id="e5c34aaa-dc62-430c-ac10-9b87d2ed44a5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4a7b2355-e66e-40ee-ade4-d000b26c539b">
+      <profileInstance Id="c9a547d6-a13f-4860-943e-26ec3cf652f4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="3abbd6bc-2a45-42cf-9a67-112bce558ca5" name="Формирование приемного листа" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="052e79f8-cfc0-4329-9089-6cbe56ac0575" />
+        <nodes>
+          <initialNode Id="7c68204b-62c6-40f9-934d-2292348df2e7" name="Initial1" isLeaf="false">
+            <elementDefinition Id="219b8344-62d5-43f1-b3b7-e48ceb307f8c" />
+            <flowNodeTargets>
+              <controlFlow Id="89077eab-3052-4964-9ebf-95d7ee9d1b4e" isLeaf="false">
+                <opaqueActionMoniker Id="303ae717-1d69-4cb3-8905-f3fe6cea166b" LastKnownName="Сформировать запрос на получение врачей" />
+                <elementDefinition Id="97494061-3ac9-49f5-8b15-a9835f28b06f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="2bffb2d2-f080-44e4-bc5a-905cc8713abc" name="Выбрать врача" isLeaf="false">
+            <elementDefinition Id="e41b907b-a981-4ebb-88e2-422db83779b2" />
+            <flowNodeTargets>
+              <controlFlow Id="ee80048b-680d-482c-a56f-a760219f5d7d" isLeaf="false">
+                <opaqueActionMoniker Id="b4b487c3-6c7b-4ad7-b047-55621012e19f" LastKnownName="Сформировать расписание врача" />
+                <elementDefinition Id="dcd316d2-51e1-4ecc-a2e4-b64f12bbfd9a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="303ae717-1d69-4cb3-8905-f3fe6cea166b" name="Сформировать запрос на получение врачей" isLeaf="false">
+            <elementDefinition Id="3881bd91-1e71-4532-b5cd-4a701ce80354" />
+            <flowNodeTargets>
+              <controlFlow Id="44114aae-1829-4128-9050-26c9b637f05a" isLeaf="false">
+                <opaqueActionMoniker Id="5e756c1f-0c5a-4d0c-989c-bf929c681b06" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="e9c6f40e-fa05-4615-91a8-641037f6335e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5e756c1f-0c5a-4d0c-989c-bf929c681b06" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="f05598e5-4fb7-4d47-a300-abe1b279283e" />
+            <flowNodeTargets>
+              <controlFlow Id="b6269ce4-771a-4e4d-a6df-57223ccf28bc" isLeaf="false">
+                <opaqueActionMoniker Id="2bffb2d2-f080-44e4-bc5a-905cc8713abc" LastKnownName="Выбрать врача" />
+                <elementDefinition Id="2af22ce2-e828-43db-b4ad-abfca2a1c075" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b4b487c3-6c7b-4ad7-b047-55621012e19f" name="Сформировать расписание врача" isLeaf="false">
+            <elementDefinition Id="fc4b8912-69d7-411d-a72c-fa03f2b3ffe6" />
+            <flowNodeTargets>
+              <controlFlow Id="2fa5b546-799f-40d8-9510-c782daa5c3f8" isLeaf="false">
+                <opaqueActionMoniker Id="38bd10e9-5afe-4ced-aa01-c6d1c3a2632f" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="ca8d9d92-d6c4-43f2-a07c-f57bf672e9ea" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="38bd10e9-5afe-4ced-aa01-c6d1c3a2632f" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="b0b585e6-43e3-43dc-8c63-1f4268e48ca2" />
+            <flowNodeTargets>
+              <controlFlow Id="45f9e1d4-d5ea-48cd-aeb1-323dd0f6ce96" isLeaf="false">
+                <opaqueActionMoniker Id="08a51321-8e50-436c-938b-afe82cd918f0" LastKnownName="Отобразить расписание" />
+                <elementDefinition Id="ff6a5bfd-5e37-4bef-8cd2-5306b376168d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="08a51321-8e50-436c-938b-afe82cd918f0" name="Отобразить расписание" isLeaf="false">
+            <elementDefinition Id="3f419103-ed77-4db5-9619-785e3da42845" />
+            <flowNodeTargets>
+              <controlFlow Id="3651a8e1-149d-4801-90f4-76937a686c8a" isLeaf="false">
+                <opaqueActionMoniker Id="ebc742ff-b8fc-4bae-9a6e-a7e19e4bae32" LastKnownName="Выбрать дату приема" />
+                <elementDefinition Id="7b2e5bab-e877-43b9-9a65-929f8af811c3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ebc742ff-b8fc-4bae-9a6e-a7e19e4bae32" name="Выбрать дату приема" isLeaf="false">
+            <elementDefinition Id="f2b23486-b638-47ba-b974-75fafa4be8c8" />
+            <flowNodeTargets>
+              <controlFlow Id="02a20ce2-a01a-4b9b-a233-506f5ec9d402" isLeaf="false">
+                <opaqueActionMoniker Id="9a3d91d2-106e-4c08-bbd2-834abe7521b3" LastKnownName="Отправить на печать" />
+                <elementDefinition Id="10fbf72d-459e-4e48-8c9a-9c596531e811" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9a3d91d2-106e-4c08-bbd2-834abe7521b3" name="Отправить на печать" isLeaf="false">
+            <elementDefinition Id="1f01c158-6f0c-4eff-ae29-8db1bb896bb0" />
+            <flowNodeTargets>
+              <controlFlow Id="5ffb5a18-4d3e-4ede-b8ca-e5f53c341a2d" isLeaf="false">
+                <opaqueActionMoniker Id="19339085-1b52-4a88-917d-9d55cf8303d6" LastKnownName="Сформировать запрос на получение всех записей на определенную дату определенного врача" />
+                <elementDefinition Id="fd7e9173-61e7-4fef-af5d-694995bafc20" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="19339085-1b52-4a88-917d-9d55cf8303d6" name="Сформировать запрос на получение всех записей на определенную дату определенного врача" isLeaf="false">
+            <elementDefinition Id="5b702770-c1b3-433e-89ed-fe480e867756" />
+            <flowNodeTargets>
+              <controlFlow Id="83d6be0e-d73e-480c-a961-407a0d8a48d3" isLeaf="false">
+                <opaqueActionMoniker Id="b1bba20b-1f8d-4574-ad41-f08a4d6ddd0a" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="00aa118d-4251-461a-bf3c-ce35fc239dba" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="b1bba20b-1f8d-4574-ad41-f08a4d6ddd0a" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="29078446-6598-4dd2-b9c9-9ceabe360122" />
+            <flowNodeTargets>
+              <controlFlow Id="fc1d5cef-2c77-4a82-ae09-9cb09c8ee248" isLeaf="false">
+                <opaqueActionMoniker Id="3d5b7e3f-2f50-4413-bfb3-e691c2ab4a66" LastKnownName="Сформировать лист" />
+                <elementDefinition Id="fdd58ff0-bb52-42b3-9fbc-67ca02e3a1a7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3d5b7e3f-2f50-4413-bfb3-e691c2ab4a66" name="Сформировать лист" isLeaf="false">
+            <elementDefinition Id="59da3f4b-2c76-4c6f-9cf1-7f8af2b86a6a" />
+            <flowNodeTargets>
+              <controlFlow Id="fc557ada-dd30-424e-8fab-f87ac7bb0eb0" isLeaf="false">
+                <opaqueActionMoniker Id="aca65b38-e92c-481c-9a27-f760b795e176" LastKnownName="Забрать отчет" />
+                <elementDefinition Id="50617b29-058c-42c5-9380-19d2c625fa16" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="aca65b38-e92c-481c-9a27-f760b795e176" name="Забрать отчет" isLeaf="false">
+            <elementDefinition Id="6b8eab33-8c94-4860-b739-765994899549" />
+            <flowNodeTargets>
+              <controlFlow Id="ff71ed9e-b01d-4b61-8b98-9ee2e072fff9" isLeaf="false">
+                <activityFinalNodeMoniker Id="28b33f8e-ad59-47ed-ae65-8bda32513fd6" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="ef378a22-8f8b-4ec1-81a3-994a1dc687ec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="28b33f8e-ad59-47ed-ae65-8bda32513fd6" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="2f4b486c-eba9-4ce7-825f-7e5cdfb5c5c5" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="c280b2b1-bec4-4797-99d6-6818219e41d0" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

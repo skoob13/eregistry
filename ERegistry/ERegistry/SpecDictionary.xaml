@@ -1,0 +1,26 @@
+﻿<Window x:Class="ERegistry.SpecDictionary"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERegistry"
+        mc:Ignorable="d"
+        Title="Словарь специальностей" Height="300" Width="500"
+        WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" Activated="Window_Activated">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" Margin="8,0,0,0">Специализация и графики</TextBlock>
+        <Button Grid.Row="0" Height="28" Width="100" HorizontalAlignment="Right" Margin="0,0,8,0" Click="AddSource">
+            Добавить запись
+        </Button>
+        <DataGrid Grid.Row="1" Name="Dic" BorderThickness="1" BorderBrush="#d8d8d8" RowHeaderWidth="0" CanUserAddRows="False" 
+                  CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" Margin="2,0,2,4"
+                  AutoGenerateColumns="True" GridLinesVisibility="None" AlternationCount="2" AlternatingRowBackground="#d8d8d8"
+                  Loaded="DGLoaded">
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a6ee82d0-df7d-42b1-999b-054facec4645" name="Z отчет" linkedPackageId="dd7608b0-31e0-4c18-9903-b1911a694917" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f8537d02-5a46-4197-b069-a507acb65498">
+      <elementDefinition Id="59b486fa-dc69-47d7-addb-1022dc88e763" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="edbceea2-1949-465f-8eca-a2ebba609219">
+      <elementDefinition Id="09c8f5b4-6c11-416f-8936-6d77dc8f7f4d" />
+      <body>Приложение</body>
+    </comment>
+    <comment Id="1797430e-f8e9-469d-ba55-bc1bb1a51910">
+      <elementDefinition Id="87ca9bf9-ee6d-4546-9786-0027abaa5864" />
+      <body>БД</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="4bb26f7b-2f73-42c1-b1ba-cfb6774d78d9">
+      <profileInstance Id="436fb7e4-7cd8-462f-b369-feab81fbdc47" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="58766480-696c-4b8a-b0c9-bcaefee1d961">
+      <profileInstance Id="30be274a-4cfa-4b33-a3fb-4b978ff38209" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="1671dfff-f138-4b4d-8683-b72342c9ebd7" name="Z отчет" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="f3e06165-e1ec-4b42-9694-120780a2ec38" />
+        <nodes>
+          <initialNode Id="cdd0aff8-72dc-4b9b-9b9a-417f687350c6" name="Initial1" isLeaf="false">
+            <elementDefinition Id="2391e7e8-f54f-4ab5-ae88-8f50097c24c2" />
+            <flowNodeTargets>
+              <controlFlow Id="8f648f47-ffcb-4d9f-a118-deb0e1bd8ccf" isLeaf="false">
+                <opaqueActionMoniker Id="87a485c1-bffc-42ec-af8a-214bf88967a8" LastKnownName="Выбрать дату отчета" />
+                <elementDefinition Id="422045c4-6a2f-451f-af98-92b03166a096" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="87a485c1-bffc-42ec-af8a-214bf88967a8" name="Выбрать дату отчета" isLeaf="false">
+            <elementDefinition Id="92ae69db-be63-4cc9-a7bf-f45965b2d4cc" />
+            <flowNodeTargets>
+              <controlFlow Id="58e78456-9c89-4aa1-b901-f916d26a3e20" isLeaf="false">
+                <opaqueActionMoniker Id="32f77b06-2bb9-4d3f-bdf6-4959a6bb24ca" LastKnownName="Сформировать запрос на получение всех проведенных услуг за дату отчета" />
+                <elementDefinition Id="4eef6523-121e-43b3-96a5-3336e933087d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="32f77b06-2bb9-4d3f-bdf6-4959a6bb24ca" name="Сформировать запрос на получение всех проведенных услуг за дату отчета" isLeaf="false">
+            <elementDefinition Id="d3f7c028-113c-46a9-bd4c-4df24de0c36f" />
+            <flowNodeTargets>
+              <controlFlow Id="9b8a4974-ed12-4115-a6ac-e59ce9568fdf" isLeaf="false">
+                <opaqueActionMoniker Id="99f33581-8113-4456-a00e-1fbd80ed29d4" LastKnownName="Выполнить запрос" />
+                <elementDefinition Id="633886d5-ed92-46e1-878b-5b2f326802cd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="99f33581-8113-4456-a00e-1fbd80ed29d4" name="Выполнить запрос" isLeaf="false">
+            <elementDefinition Id="8bd46082-1908-4c86-91b2-66c0832bdcd7" />
+            <flowNodeTargets>
+              <controlFlow Id="60ee1e1a-65d7-4119-9561-a948bc4e043c" isLeaf="false">
+                <opaqueActionMoniker Id="19516797-93a8-4f3f-ac8c-5d5c3d038653" LastKnownName="Сформировать Excel книгу" />
+                <elementDefinition Id="5a70ce50-c225-4329-8932-a11896579961" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="19516797-93a8-4f3f-ac8c-5d5c3d038653" name="Сформировать Excel книгу" isLeaf="false">
+            <elementDefinition Id="d090861a-4a38-49b1-9293-66ead12f99a9" />
+            <flowNodeTargets>
+              <controlFlow Id="1d0f443e-9f2e-4aae-a19c-48cc9d241e14" isLeaf="false">
+                <opaqueActionMoniker Id="f470616a-f60c-4769-be54-6e004b278fcb" LastKnownName="Распечатать отчет" />
+                <elementDefinition Id="80db6952-e9b4-4823-8d5e-e09691a5c76e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f470616a-f60c-4769-be54-6e004b278fcb" name="Распечатать отчет" isLeaf="false">
+            <elementDefinition Id="4f3c64fb-879f-438e-9444-639633615e8a" />
+            <flowNodeTargets>
+              <controlFlow Id="b09afe3a-9996-4eb4-a229-19583c314953" isLeaf="false">
+                <activityFinalNodeMoniker Id="3e294b49-dc27-44c0-9613-a7775413a1b1" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="4a557d59-6d58-4b1a-a310-4933db0bcf6c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="3e294b49-dc27-44c0-9613-a7775413a1b1" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="39b196a9-25e6-425a-8746-0d139e787bc8" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="dd7608b0-31e0-4c18-9903-b1911a694917" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

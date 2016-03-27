@@ -1,0 +1,226 @@
+﻿<Page x:Class="ERegistry.UserGroups"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ERegistry"
+      mc:Ignorable="d" 
+      xmlns:xctk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      d:DesignHeight="600" d:DesignWidth="600"
+      MinHeight="600" MinWidth="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#19191F" Margin="-18,0,18,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Margin="8,16,8,0" MouseDown="Grid_MouseDown" Background="Transparent">
+                <Rectangle Fill="White" Name="ClRect"/>
+                <TextBlock Name="ClTB" Foreground="#19191F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Клиенты</TextBlock>
+            </Grid>
+            <Grid Grid.Column="2" Margin="8,16,8,0" MouseDown="Grid_MouseDown_1" Background="Transparent">
+                <Rectangle Name="EmRect" Fill="White" Visibility="Hidden"/>
+                <TextBlock Name="EmTB" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Сотрудники</TextBlock>
+            </Grid>
+            <Grid Grid.Column="3" Margin="8,16,8,0" MouseDown="Grid_MouseDown_2" Background="Transparent">
+                <Rectangle Name="SeRect" Fill="White" Visibility="Hidden"/>
+                <TextBlock Name="SeTB" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Услуги</TextBlock>
+            </Grid>
+            <Grid Grid.Column="4" Margin="8,16,8,0" MouseDown="Grid_MouseDown_3" Background="Transparent">
+                <Rectangle Name="PrRect" Fill="White" Visibility="Hidden"/>
+                <TextBlock Name="PrTB" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Графики</TextBlock>
+            </Grid>
+            <Grid Grid.Column="5" Margin="8,16,8,0" MouseDown="Grid_MouseDown_4" Background="Transparent">
+                <Rectangle Name="AnRect" Fill="White" Visibility="Hidden"/>
+                <TextBlock Name="AnTB" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Анализы</TextBlock>
+            </Grid>
+            <!--Grid Grid.Column="7" Margin="0,16,20,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" MouseLeftButtonDown="AddButton">
+                <TextBlock Name="AddTB" FontSize="12" Foreground="White">Добавить клиента</TextBlock>
+            </-->
+            <Grid Grid.Column="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--Grid Name="Graph" Visibility="Hidden" Grid.Column="0" Margin="0,16,0,0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="Transparent">
+                    <Image Source="{StaticResource DayView}" Height="20" Width="20"></Image>
+                </-->
+                <Grid Grid.Column="1" Margin="0,16,0,0" MouseLeftButtonDown="AddButton" Background="Transparent">
+                    <Image Source="{StaticResource Plus}" Height="28" Width="28"></Image>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Name="ClientPanel"  Grid.Row="0" Margin="8,8,20,8" Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="34"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="Tb_p" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Паспорт:</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Фамилия:</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Имя:</TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Отчество:</TextBlock>
+                <Grid Grid.Row="4" Grid.Column="0" Margin="2">
+                    <Button Click="Button_Click">Очистить</Button>
+                </Grid>
+
+                <xctk:MaskedTextBox MaxLength="7" TextChanged="c_p_TextChanged" Mask="00 00 000 000" Name="c_p" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Margin="2"/>
+                <TextBox Name="c_s" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="2"/>
+                <TextBox Name="c_n" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="2"/>
+                <TextBox Name="c_o" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="2"/>
+
+                <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="4,0,0,0">Пол:</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="4,0,0,0">Дата рождения:</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="4,0,0,0">Моб. телефон:</TextBlock>
+                <TextBlock Name="AdressTB"  Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Margin="4,0,0,0">Адрес:</TextBlock>
+
+                <ComboBox Name="c_g" Grid.Row="0" Grid.Column="3" Margin="2">
+                    <ComboBoxItem>Женский</ComboBoxItem>
+                    <ComboBoxItem>Мужской</ComboBoxItem>
+                </ComboBox>
+                <DatePicker Name="c_b" Grid.Row="1" Grid.Column="3" Margin="2,0,2,0"/>
+                <xctk:MaskedTextBox Mask="8 (000) 000-00-00" Name="c_ph" VerticalAlignment="Center" Grid.Row="2" Grid.Column="3" Margin="2"/>
+                <TextBox Name="c_a" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Margin="2"/>
+
+                <Button Name="FindClient" Grid.Row="4" Grid.Column="3" Width="100" HorizontalAlignment="Right" Margin="2" Click="FindClient_Click">
+                    Найти
+                </Button>
+            </Grid>
+            <Grid Name="ServicesPanel" Grid.Row="0" Margin="8,8,20,8" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="34"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Название услуги:</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">Стоимость:</TextBlock>
+                <TextBox Name="s_num" Grid.Column="1" Grid.Row="1" Margin="2"/>
+                <TextBox Name="s_cost" TextChanged="OnlyDigitsEnter" MaxLength="10" Grid.Column="1" Grid.Row="2" Margin="2"/>
+                
+                <Button Click="s_flush_Click" Name="s_flush" Grid.Row="4" Grid.Column="0" Margin="2">
+                    Очистить
+                </Button>
+                
+                <Button Click="s_find_Click" Name="s_find" Grid.Row="4" Grid.Column="3" Width="100" HorizontalAlignment="Right" Margin="2">
+                    Найти
+                </Button>
+            </Grid>
+            <Grid Name="ProfPanel" Grid.Row="0" Margin="8,8,20,8" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="34"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">Номер сотрудника:</TextBlock>
+                <TextBox Name="ds_num" TextChanged="OnlyDigitsEnter" MaxLength="7" Grid.Column="1" Grid.Row="0" Margin="2"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Фамилия</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">Имя</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Отчество</TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Center">Название спец.:</TextBlock>
+                <TextBox Name="ds_sur" Grid.Column="1" Grid.Row="1" Margin="2"/>
+                <TextBox Name="ds_name" Grid.Column="1" Grid.Row="2" Margin="2"/>
+                <TextBox Name="ds_ot" Grid.Column="1" Grid.Row="3" Margin="2"/>
+                <TextBox Name="ds_spec" Grid.Column="3" Grid.Row="0" Margin="2"/>
+                <Button Click="ds_flush_Click" Name="ds_flush" Grid.Row="4" Grid.Column="0" Margin="2">
+                    Очистить
+                </Button>
+
+                <Button Grid.Row="4" Grid.Column="1" Margin="2" Width="150" HorizontalAlignment="Left" Click="OpenDictionarySpecializations">
+                    Словарь специальностей
+                </Button>
+                
+                <Button Click="ds_find_Click" Name="ds_find" Grid.Row="4" Grid.Column="3" Width="100" HorizontalAlignment="Right" Margin="2">
+                    Найти
+                </Button>
+            </Grid>
+            <Grid Name="AnalysesPanel" Grid.Row="0" Margin="8,8,20,8" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="34"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Название анализа:</TextBlock>
+                <TextBox Name="a_name" Grid.Column="1" Grid.Row="1" Margin="2"/>
+
+                <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">Стоимость:</TextBlock>
+                <TextBox Name="a_cost" TextChanged="OnlyDigitsEnter" MaxLength="10" Grid.Column="1" Grid.Row="2" Margin="2"/>
+                
+                <Button Click="a_flush_Click" Name="a_flush" Grid.Row="4" Width="100" HorizontalAlignment="Left" Grid.Column="0" Margin="2">
+                    Очистить
+                </Button>
+
+                <Button Click="a_find_Click" Name="a_find" Grid.Row="4" Grid.Column="3" Width="100" HorizontalAlignment="Right" Margin="2">
+                    Найти
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1" Background="#F6F6F6">
+                <DataGrid Name="Shower" ColumnWidth="*" BorderThickness="0.5" RowHeaderWidth="0" CanUserAddRows="False" 
+                  CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="True" Margin="2,0,2,4"
+                  GridLinesVisibility="None" AlternationCount="2" AlternatingRowBackground="#d8d8d8" IsReadOnly="True">
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Name="EditMI" Header="Редактировать" Click="EditMI_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="{StaticResource Edit}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Name="DeleteMI" Header="Удалить" Click="DeleteMI_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="{StaticResource Delete}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

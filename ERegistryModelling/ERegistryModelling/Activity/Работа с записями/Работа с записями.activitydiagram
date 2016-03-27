@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="76bdde4b-1b6d-402f-9f97-7443e4be659c" name="Работа с записями" linkedPackageId="2efe15dc-9467-4110-af70-c38d1c5b40b0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f62bec2e-aa90-4722-9b68-c044213f81ea">
+      <elementDefinition Id="ca02e3d2-224c-46a2-8711-4a4a9dd26bef" />
+      <body>Пользователь</body>
+    </comment>
+    <comment Id="399de578-6fde-4f20-a26a-991784bcd935">
+      <elementDefinition Id="f00a31d4-e0e5-4345-832a-87cbc4e3b505" />
+      <body>Приложение</body>
+    </comment>
+    <comment Id="cb311be6-c8d3-4ff4-85f0-fb1c40e5ea1d">
+      <elementDefinition Id="b599e61e-d143-40f2-b27f-c080f19109cb" />
+      <body>БД</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="572d5000-9695-4e0c-8a44-f801d3d9590c">
+      <profileInstance Id="318cc04e-82d7-4a13-bb14-82be328907b9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="35fc1587-cfb6-4d32-b7d8-643e86f7c5d4">
+      <profileInstance Id="6db7d3f4-c45c-4780-a73e-ffcef770c3ed" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="d7a61af0-7bce-4fc6-925d-d321d62bfe51" name="Работа с записями" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="fa5bc2bc-7870-43d7-8e58-d315ffee8b2e" />
+        <nodes>
+          <initialNode Id="f8c898ff-0c93-4f7d-8371-b39e881484ff" name="Initial1" isLeaf="false">
+            <elementDefinition Id="af78414c-18e5-4ca8-9543-fc23bf10dee6" />
+            <flowNodeTargets>
+              <controlFlow Id="cf0ac546-1e6e-4dbb-8b72-7e13b3df7d99" isLeaf="false">
+                <opaqueActionMoniker Id="b0cd5c29-84ee-4382-bd26-827a9c1fec4f" LastKnownName="Пользователь открывает форму отображения записей к врачу" />
+                <elementDefinition Id="a95bde0b-ffde-44c1-9b5b-666b5ec2cf21" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="b0cd5c29-84ee-4382-bd26-827a9c1fec4f" name="Пользователь открывает форму отображения записей к врачу" isLeaf="false">
+            <elementDefinition Id="ea5aa0ac-7d8c-4f73-b0ff-b791780e7648" />
+            <flowNodeTargets>
+              <controlFlow Id="bf5a59ce-ff9e-4a75-965d-628738cca60d" isLeaf="false">
+                <opaqueActionMoniker Id="4dde0b00-5278-4388-b601-4f79b7b16b1f" LastKnownName="Формируется запрос на получение списка записей" />
+                <elementDefinition Id="6a850ebf-2c91-4ce2-8716-0ef32da55f29" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4dde0b00-5278-4388-b601-4f79b7b16b1f" name="Формируется запрос на получение списка записей" isLeaf="false">
+            <elementDefinition Id="6cfef8b3-9b46-4d91-a37a-398dd169fcc4" />
+            <flowNodeTargets>
+              <controlFlow Id="0eafc505-346d-4b60-b7c3-cc728e1ec609" isLeaf="false">
+                <opaqueActionMoniker Id="1a578eb9-a4a0-421d-9c1c-09f339cde540" LastKnownName="Запрос выполняется" />
+                <elementDefinition Id="f12b57e4-e655-444d-8a7f-96cffcfc1a41" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1a578eb9-a4a0-421d-9c1c-09f339cde540" name="Запрос выполняется" isLeaf="false">
+            <elementDefinition Id="3079ae80-aa69-4b41-9679-093b2c6858d0" />
+            <flowNodeTargets>
+              <controlFlow Id="07ff26f3-e033-487f-9769-739d8c6e6aa5" isLeaf="false">
+                <opaqueActionMoniker Id="1d352bdb-1cf5-4b64-a6bc-e3184b0e80e9" LastKnownName="Данные отображаются на таблице" />
+                <elementDefinition Id="123d188a-d0a7-4fc9-b170-5b8fcccd235e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1d352bdb-1cf5-4b64-a6bc-e3184b0e80e9" name="Данные отображаются на таблице" isLeaf="false">
+            <elementDefinition Id="0c39ccba-8e8c-46c6-938f-21fd7b58279d" />
+            <flowNodeTargets>
+              <controlFlow Id="b15ca317-515a-4dd6-bcb4-37a7e02115cc" isLeaf="false">
+                <opaqueActionMoniker Id="1a6997d7-1e81-413f-922e-920fa2135a93" LastKnownName="Пользователь совершает действия" />
+                <elementDefinition Id="61efe391-6307-4de0-9def-11c4d8ac62d1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1a6997d7-1e81-413f-922e-920fa2135a93" name="Пользователь совершает действия" isLeaf="false">
+            <elementDefinition Id="7efa345d-db9d-4ad1-b4d8-01dc20389daf" />
+            <flowNodeTargets>
+              <controlFlow Id="233f4abd-ffe7-4b13-bec0-6917dd99761b" isLeaf="false">
+                <activityFinalNodeMoniker Id="90e3a130-91d9-4c53-9de1-c386de0d47bb" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7da582ee-d4ed-423b-8136-fb84f78d04fa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="90e3a130-91d9-4c53-9de1-c386de0d47bb" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="e929c3e8-fe37-432f-82cd-54ed9545606b" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="2efe15dc-9467-4110-af70-c38d1c5b40b0" name="ERegistryModelling">
+    <elementDefinition Id="a402fa4d-6c57-4c6d-b3e2-f5e912ffc13d" />
+  </package>
+</activityRootModel>

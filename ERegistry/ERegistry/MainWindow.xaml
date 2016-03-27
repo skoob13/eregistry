@@ -1,0 +1,179 @@
+﻿<Window x:Class="ERegistry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERegistry"
+        mc:Ignorable="d"
+        Title="Электронная регистратура" MinHeight="650" MinWidth="800"
+        WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="{StaticResource Calendar}">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition MinWidth="600" Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="#19191F">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Border CornerRadius="50" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4">
+                            <Grid>
+                                <Border Name="mask" Background="White" CornerRadius="50"/>
+                                <StackPanel>
+                                    <StackPanel.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=mask}"/>
+                                    </StackPanel.OpacityMask>
+
+                                    <Image Name="Avatar" Width="100" Height="100" Source="{StaticResource DefaultImage}"/>
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="16,0,16,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Name="Login_Tb" TextWrapping="WrapWithOverflow" Foreground="#666674" Opacity="0.9" FontSize="20">Georgiy Tarasov</TextBlock>
+                        </Grid>
+                        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,0,0,0">
+                            <Image Height="16" Width="16" Source="{StaticResource Settings}"></Image>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Line Stroke="#666674" VerticalAlignment="Bottom" X1="16" Y1="178" X2="184" Y2="178"></Line>
+                <Grid Grid.Row="1" Margin="0,16,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Name="RegistryGrid" Background="#101014" MouseLeftButtonDown="RegistryGrid_MouseLeftButtonDown">
+                        <Rectangle Name="RegistryRect" Fill="#FF4C4C" Width="8" Height="45" VerticalAlignment="Center" HorizontalAlignment="Left"></Rectangle>
+                        <TextBlock Name="RegistryTB" FontSize="19" Foreground="White" Margin="16,0,0,0" VerticalAlignment="Center">Регистратура</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1" Name="ManGrid" Background="Transparent" MouseLeftButtonDown="ManGrid_MouseLeftButtonDown">
+                        <Rectangle Name="ManRect" Fill="#FF4C4C" Width="8" Height="45" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Hidden"></Rectangle>
+                        <TextBlock Name="ManTB" FontSize="19" Foreground="#69696D" Margin="16,0,0,0" VerticalAlignment="Center">Управление БД</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="2" Name="HisGrid" Background="Transparent" MouseLeftButtonDown="HisGrid_MouseLeftButtonDown">
+                        <Rectangle Name="HisRect" Fill="#FF4C4C" Width="8" Height="45" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Hidden"></Rectangle>
+                        <TextBlock Name="HisTB" FontSize="19" Foreground="#69696D" Margin="16,0,0,0" VerticalAlignment="Center">История болезни</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="3" Name="FormsGrid" Background="Transparent" MouseLeftButtonDown="FormsGrid_MouseLeftButtonDown">
+                        <Rectangle Name="FormsRect" Fill="#FF4C4C" Width="8" Height="45" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Hidden"></Rectangle>
+                        <TextBlock Name="FormsTB" FontSize="19" Foreground="#69696D" Margin="16,0,0,0" VerticalAlignment="Center">Отчеты</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <TextBlock HorizontalAlignment="Center" FontSize="12" Foreground="#101014" VerticalAlignment="Bottom">@skoob13, HSE 2016</TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Background="#19191F">
+                <Frame x:Name="NavigationPage" NavigationUIVisibility="Hidden"/>
+            </Grid>
+        </Grid>
+        <Grid Background="#FF4C4C" Name="Overlay" Visibility="Visible">
+            <Border CornerRadius="40" Background="White" Width="300" Height="200">
+                <Grid>
+                    <Grid Name="login">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="DemiBold" FontSize="18">Электронная регистратура</TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="15" Margin="8,4,4,4">Логин:</TextBlock>
+                            <TextBox MaxLength="32" Name="Login" VerticalAlignment="Center" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4"></TextBox>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="15" Margin="8,4,4,4">Пароль:</TextBlock>
+                            <PasswordBox MaxLength="32" VerticalAlignment="Center" Name="Password" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4"></PasswordBox>
+                        </Grid>
+                        <Grid Grid.Row="3">
+                            <Button Name="Reg" Click="Reg_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="32,0,0,0">Регистрация</Button>
+                            <Button Name="Log" Click="Log_Click" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,32,0">Войти</Button>
+                        </Grid>
+                    </Grid>
+                    <Grid Name="reg" Visibility="Hidden">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Регистрация</TextBlock>
+
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="15" Margin="8,4,4,4">Логин:</TextBlock>
+                            <TextBox MaxLength="32" VerticalAlignment="Center" Name="reg_name" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4"></TextBox>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="15" Margin="8,4,4,4">Пароль:</TextBlock>
+                            <PasswordBox MaxLength="32" VerticalAlignment="Center" Name="reg_pas" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4"></PasswordBox>
+                        </Grid>
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="10" Margin="8,4,4,4">Повтор пароля:</TextBlock>
+                            <PasswordBox MaxLength="32" VerticalAlignment="Center" Name="reg_pas_again" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4"></PasswordBox>
+                        </Grid>
+                        <Grid Grid.Row="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="15" Margin="8,4,4,4">Тип:</TextBlock>
+                            <ComboBox VerticalAlignment="Center" Name="reg_type" Background="#f2f2f2" Grid.Column="1" Margin="0,4,8,4">
+                                <ComboBoxItem>Администратор</ComboBoxItem>
+                                <ComboBoxItem>Врач</ComboBoxItem>
+                                <ComboBoxItem>Руководитель</ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                        
+                        <Grid Grid.Row="5">
+                            <Button Name="registration" Width="100" Margin="4" Click="registration_Click">Регистрация</Button>
+                            <Button Name="Back" Width="50" HorizontalAlignment="Left" Margin="32,4,4,4" Click="Reg_Click">Назад</Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
